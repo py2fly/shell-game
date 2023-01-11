@@ -3,9 +3,9 @@ const shell1Button = document.getElementById('shell1-button');
 const shell2Button = document.getElementById('shell2-button');
 const shell3Button = document.getElementById('shell3-button');
 
-const shedContainer = document.getElementById('shed-container');
-const treeContainer = document.getElementById('tree-container');
-const boulderContainer = document.getElementById('boulder-container');
+const shell1Container = document.getElementById('shell1-container');
+const shell2Container = document.getElementById('shell2-container');
+const shell3Container = document.getElementById('shell3-container');
 
 const totalEl = document.getElementById('total');
 const lossesEl = document.getElementById('losses');
@@ -15,6 +15,23 @@ let correctGuesses = 0;
 let totalGuesses = 0;
 
 /* Get DOM Elements */
+shell1Button.addEventListener('click', () => {
+    const correctSpot = getRandomHidingSpot();
+    handleGuess('shell1', correctSpot);
+    console.log(correctSpot);
+});
+
+shell2Button.addEventListener('click', () => {
+    const correctSpot = getRandomHidingSpot();
+    handleGuess('shell2', correctSpot);
+    console.log(correctSpot);
+});
+
+shell3Button.addEventListener('click', () => {
+    const correctSpot = getRandomHidingSpot();
+    handleGuess('shell3', correctSpot);
+    console.log(correctSpot);
+});
 
 /* State */
 
