@@ -43,9 +43,9 @@ function getRandomHidingSpot() {
 }
 /* Events */
 function handleGuess(userGuess, correctSpot) {
-    shell1Container.classList.remove('shell-b.png');
-    shell2Container.classList.remove('shell-b.png');
-    shell3Container.classList.remove('shell-b.png');
+    shell1Container.classList.remove('assets/shell-b.png');
+    shell2Container.classList.remove('assets/shell-b.png');
+    shell3Container.classList.remove('assets/shell-b.png');
 
     totalGuesses++;
 
