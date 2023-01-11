@@ -42,7 +42,23 @@ function getRandomHidingSpot() {
     return correctSpot;
 }
 /* Events */
+function handleGuess(userGuess, correctSpot) {
+    shell1Container.classList.remove('./assets/shell-b.png');
+    shell2Container.classList.remove('./assets/shell-b.png');
+    shell3Container.classList.remove('./assets/shell-b.png');
 
-/* Display Functions */
+    totalGuesses++;
+
+    const correctHidingPlace = document.getElementById(`${correctSpot}-container`);
+    correctHidingPlace.classList.add('./assets/shell-b.png');
+
+    if (userGuess === correctSpot) {
+        correctGuesses++;
+    }
+    /* Display Functions */
+    winsEl.textContent = correctGuesses;
+    lossesEl.textContent = totalGuesses - correctGuesses;
+    totalEl.textContent = totalGuesses;
+}
 
 // (don't forget to call any display functions you want to run on page load!)
