@@ -34,7 +34,13 @@ shell3Button.addEventListener('click', () => {
 });
 
 /* State */
-
+function getRandomHidingSpot() {
+    const hidingPlaces = ['shell1', 'shell2', 'shell3'];
+    const index = math.floor(math.random() * hidingPlaces.length);
+    const correctSpot = hidingPlaces[index];
+    console.log(correctSpot);
+    return correctSpot;
+}
 /* Events */
 
 /* Display Functions */
