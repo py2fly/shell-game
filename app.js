@@ -36,21 +36,21 @@ shell3Button.addEventListener('click', () => {
 /* State */
 function getRandomHidingSpot() {
     const hidingPlaces = ['shell1', 'shell2', 'shell3'];
-    const index = math.floor(math.random() * hidingPlaces.length);
+    const index = Math.floor(Math.random() * hidingPlaces.length);
     const correctSpot = hidingPlaces[index];
     console.log(correctSpot);
     return correctSpot;
 }
 /* Events */
 function handleGuess(userGuess, correctSpot) {
-    shell1Container.classList.remove('./assets/shell-b.png');
-    shell2Container.classList.remove('./assets/shell-b.png');
-    shell3Container.classList.remove('./assets/shell-b.png');
+    shell1Container.classList.remove('shell-b.png');
+    shell2Container.classList.remove('shell-b.png');
+    shell3Container.classList.remove('shell-b.png');
 
     totalGuesses++;
 
     const correctHidingPlace = document.getElementById(`${correctSpot}-container`);
-    correctHidingPlace.classList.add('./assets/shell-b.png');
+    correctHidingPlace.classList.add('shell-b.png');
 
     if (userGuess === correctSpot) {
         correctGuesses++;
