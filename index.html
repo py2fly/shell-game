@@ -1,39 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>shell game</title>
+        <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
-    <!-- title and favicon -->
-    <title>Web App</title>
-    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <!-- see https://fonts.google.com/ -->
 
-    <!-- fonts -->
-    <!-- see https://fonts.google.com/ -->
+        <!-- css -->
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <!-- add link for page specific css -->
+    </head>
 
-    <!-- css -->
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
-    <!-- add link for page specific css -->
+    <body>
+        <header>
+            <img class="logo" src="assets/html_css_js.png" alt="logo" />
+            <h1>shell game</h1>
+        </header>
 
-</head>
-
-<body>
-    <header>
-        <img class="logo" src="assets/html_css_js.png" alt="logo">
-        <h1>Web App</h1>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <section class="main-section">
+                <h2>Guess where I'm hiding the Pearl!</h2>
+                <div id="shell1-container" class="hiding-places">
+                    <div class="hiding-place">
+                        <img src="./assets/shell-A.png" class="hiding-img" />
+                        <button id="shell1-button">Shell 1</button>
+                    </div>
+                    <div class="hiding-place">
+                        <img src="./assets/shell-A.png" class="hiding-img" />
+                        <button id="shell2-button">Shell 2</button>
+                    </div>
+                    <div class="hiding-place">
+                        <img src="./assets/shell-A.png" class="hiding-img" />
+                        <button id="shell3-button">Shell 3</button>
+                    </div>
+                </div>
+                <div>You guessed correctly <span id="wins">0</span> times</div>
+                <div>and incorrectly <span id="losses">0</span> times</div>
+                <div>out of</div>
+                <div><span id="total">0</span> games.</div>
+            </section>
+        </main>
+    </body>
 </html>
